@@ -1,4 +1,5 @@
-const input = process.env.INPUT;
+const fs = require('fs');
+const input = fs.readFileSync('./day1_data.txt', { encoding: 'utf8' }).trim();
 const length = input.length;
 
 function part1() {
