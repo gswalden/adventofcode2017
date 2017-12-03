@@ -1,0 +1,19 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/node:8
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      - run:
+          name: Run each day's code
+          command: |
+            for i in day*.js; do
+              echo "$i"
+              node $i
+              echo
+            done;
