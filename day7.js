@@ -114,7 +114,7 @@ function part2() {
       }
     }
 
-    const num = nodes[badIndex].weight - (weights[badIndex] - weights[goodIndex]);
+    const num = nodes[badIndex].weight - (weights[badIndex] - weights[goodIndex]); // may be a bug here. given input works but this may need a Math.abs() for general solution
     console.log('Part 2: %d', num);
     process.exit();
   }
